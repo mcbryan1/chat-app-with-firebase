@@ -1,11 +1,12 @@
 import React from 'react'
 import './Register.css'
+import Layout from '../../Components/Layout'
 
 const Register = () => {
     return (
-        <div>
+        <Layout>
             <h1>Register Page</h1>
-        </div>
+        </Layout>
     )
 }
 

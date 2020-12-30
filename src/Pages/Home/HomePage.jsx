@@ -1,11 +1,14 @@
 import React from 'react'
+import Layout from '../../Components/Layout'
 import './HomePage.css'
 
 const HomePage = () => {
     return (
-        <div>
+        <Layout>
             <h1>HomePage</h1>
-        </div>
+
+        </Layout>
+        
     )
 }
 

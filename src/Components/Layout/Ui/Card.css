@@ -1,0 +1,14 @@
+.card {
+  margin-left: 15rem;
+  width: 50rem;
+  height: 30rem;
+
+  background: radial-gradient(
+    99.1% 182.42% at 0.9% 2.37%,
+    rgba(255, 255, 255, 0.32) 0%,
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+  border: 0.1px solid #fff;
+}
