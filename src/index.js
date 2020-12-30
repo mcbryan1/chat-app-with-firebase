@@ -2,6 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import firebase from 'firebase'
+
+
+
+// My web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCHPykrdmJNZ6PuC1-IeF6IlRNmmW01_EQ",
+    authDomain: "messenger-appp.firebaseapp.com",
+    projectId: "messenger-appp",
+    storageBucket: "messenger-appp.appspot.com",
+    messagingSenderId: "78452944692",
+    appId: "1:78452944692:web:5987f166c087c4ceaf7f61",
+    measurementId: "G-MWE56BKG97"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
 
 ReactDOM.render(
