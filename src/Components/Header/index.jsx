@@ -6,7 +6,9 @@ const Header = (props) => {
   return (
     <header className="header">
       <div style={{ display: "flex" }}>
-        <div className="logo">Web Messenger</div>
+        <div className="logo">
+          <NavLink to={"/"}>Chitty Chat</NavLink>
+        </div>
 
         <ul className="leftMenu">
           <li>
@@ -17,9 +19,10 @@ const Header = (props) => {
           </li>
         </ul>
       </div>
-      <div
-        style={{ margin: "20px 0", color: "#fff", fontWeight: "bold" }}
-      > Hi Solomon</div>
+      <div style={{ margin: "20px 0", color: "#fff", fontWeight: "bold" }}>
+        {" "}
+        Hi Solomon
+      </div>
       <ul className="menu">
         <li>
           <Link to={"#"} onClick={props.logout}>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import Layout from "../../Components/Layout";
-import Card from "../../Components/Layout/Ui/Card";
+import Card from "../../Components/UI/Card";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
