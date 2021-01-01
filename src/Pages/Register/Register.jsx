@@ -2,18 +2,32 @@ import React, { useState } from "react";
 import "./Register.css";
 import Layout from "../../Components/Layout";
 import Card from "../../Components/UI/Card";
+import { signup } from "../../Redux/actions/authAction";
+import { useDispatch } from "react-redux";
 
 const Register = () => {
   const [firstName, setfirstName] = useState("");
   const [lastName, setlastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const registerUser = (e) => {
+    e.preventDefault()
+    const user = {
+      firstName,
+      lastName,
+      email,
+      password,
+    };
+    dispatch(signup(user));
+  };
 
   return (
     <Layout>
       <div className="main">
         <Card>
-          <form action="" className="form">
+          <form action="" className="form" onSubmit={registerUser}>
             <div className="login_text">
               <h1>Register</h1>
             </div>

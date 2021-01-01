@@ -7,7 +7,7 @@ const Header = (props) => {
     <header className="header">
       <div style={{ display: "flex" }}>
         <div className="logo">
-          <NavLink to={"/"}>Chitty Chat</NavLink>
+          Chitty Chat
         </div>
 
         <ul className="leftMenu">
