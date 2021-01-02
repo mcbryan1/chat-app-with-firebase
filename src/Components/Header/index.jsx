@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./style.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector,  } from "react-redux";
 
 const Header = (props) => {
   const auth = useSelector((state) => state.auth);
@@ -16,7 +16,7 @@ const Header = (props) => {
               <NavLink to={"/login"}>Login</NavLink>
             </li>
             <li>
-              <NavLink to={"/signup"}>Sign up</NavLink>
+              <NavLink to={"/register"}>Sign up</NavLink>
             </li>
           </ul>
         ) : null}

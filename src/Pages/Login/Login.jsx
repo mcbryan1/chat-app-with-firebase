@@ -11,8 +11,10 @@ const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const auth = useSelector(state => state.auth);
-
+  const auth = useSelector((state) => state.auth);
+  
+  
+ 
 
   const userLogin = (e) => {
     e.preventDefault();
@@ -29,9 +31,8 @@ const Login = (props) => {
     dispatch(signin({ email, password }));
   };
 
-
-  if(auth.authenticated){
-    return <Redirect to={`/`} />
+  if (auth.authenticated) {
+    return <Redirect to={`/`} />;
   }
 
   return (
