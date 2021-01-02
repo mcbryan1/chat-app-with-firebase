@@ -94,7 +94,7 @@ export const signin = (user) => {
 export const isLoggedInUser = () => {
   return async (dispatch) => {
     const user = localStorage.getItem("user")
-      ? JSON.parse(localStorage.getItem("user")) 
+      ? JSON.parse(localStorage.getItem("user"))
       : null;
 
     if (user) {
@@ -108,5 +108,28 @@ export const isLoggedInUser = () => {
         payload: { error: "Login again please" },
       });
     }
+  };
+};
+
+//Logging Out User
+export const logout = (uid) => {
+  return async (dispatch) => {
+    dispatch({ type: `${authConstant.USER_LOGOUT}_REQUEST` });
+    //Now lets logout user
+
+    auth()
+      .signOut()
+      .then(() => {
+        //successfully
+        localStorage.clear();
+        dispatch({ type: `${authConstant.USER_LOGOUT}_SUCCESS` });
+      })
+      .catch((error) => {
+        console.log(error);
+        dispatch({
+          type: `${authConstant.USER_LOGOUT}_FAILURE`,
+          payload: { error },
+        });
+      });
   };
 };

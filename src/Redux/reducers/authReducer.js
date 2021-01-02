@@ -11,7 +11,7 @@ const initState = {
 };
 
 export default (state = initState, action) => {
-  console.log(action)
+  console.log(action);
   // eslint-disable-next-line default-case
   switch (action.type) {
     case `${authConstant.USER_LOGIN}_REQUEST`:
@@ -33,6 +33,19 @@ export default (state = initState, action) => {
         ...state,
         authenticated: false,
         authenticating: false,
+        error: action.payload.error,
+      };
+      break;
+    case `${authConstant.USER_LOGOUT}_REQUEST`:
+      break;
+    case `${authConstant.USER_LOGOUT}_SUCCESS`:
+      state = {
+        ...initState,
+      };
+      break;
+    case `${authConstant.USER_LOGOUT}_FAILURE`:
+      state = {
+        ...state,
         error: action.payload.error,
       };
       break;
